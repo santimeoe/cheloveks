@@ -1,0 +1,164 @@
+body {
+    font-family: 'Nimbus Sans Becker PBla', 'Kanit Static';
+    font-size: 22.5px;
+    line-height: 1.6;
+    background-color: rgb(66, 62, 117);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box; 
+}
+
+.selection {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(47, 44, 85, 0.452);
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.45em;
+}
+
+.btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    width: 30px; 
+    height: 30px; 
+    color: #000000;
+    text-decoration: none; 
+}   
+
+.btn span {
+    width: inherit; 
+    height: 3px; 
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+.container-for-header{
+    position: fixed;
+    top: 120px;
+    padding-left: 200px;
+    padding-right: 150px;
+}
+
+.header{
+    font-size: 18px;
+    font-weight: lighter !important;
+    text-decoration: underline black;
+}
+
+/* .blog-form{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+} */
+
+input{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    background-color: antiquewhite ;
+    top: 300px;
+    border: 5px;
+    border-style: groove;
+    border-color: #000000;
+    border-radius: 10%;
+    width: 500px;
+    height: auto;
+}
+
+input:focus + label::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #00bfff;
+    animation: input-focus-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes input-focus-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50px;
+    }
+}
+
+.text{
+    position: relative;
+    display: block;
+    top: 500px;
+    width: 500px;
+    height: auto;
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    color: darkred;
+}
+
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(47, 44, 85);
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container .copyright {
+    display: inline-block;
+}
+
+.container p {
+    margin: 5px 0;
+}
+
+.copyright-title{
+    font-size: 23px;
+}
+.copyright-title span{
+    color: #ffffffc2;
+    font-size: 20.7px;
+}
