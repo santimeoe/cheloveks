@@ -100,14 +100,14 @@ input:focus + label::after {
     animation: input-focus-animation 0.3s ease-in-out forwards;
 }
 
-@keyframes input-focus-animation {
+/* @keyframes input-focus-animation {
     from {
         width: 0;
     }
     to {
         width: 50px;
     }
-}
+} */
 
 .text{
     position: relative;
