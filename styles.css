@@ -29,7 +29,7 @@ body {
     height: 40px;
     position: fixed;
     top: 38.5px;
-    right: 30px;
+    right: 38.  5px;
     cursor: pointer;
     z-index: 1000;
 }
@@ -47,7 +47,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #f9f9f9;
+    background-color: #ff5555;
     width: 200px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -61,13 +61,18 @@ body {
   
 .menu-container ul li {
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dbdbdb;
 }
   
 .menu-container ul li:last-child {
     border-bottom: none;
 }
-  
+
+.menu-container ul li:hover {
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
 .logo{
     position: relative;
     display: block;
