@@ -1,0 +1,12 @@
+body{
+    background-color: pink;
+    margin: 0;
+    font-family: 'Comic Sans';
+    -webkit-font-smoothing: antialiased;
+}
+
+p{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+}
