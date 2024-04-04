@@ -1,111 +1,121 @@
-body{
+body {
     background-color: pink;
     margin: 0;
-    font-family: 'Comic Sans';
+    font-family: 'Comic Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
-*,
-*:before,
-*:after{
-    box-sizing: border-box; 
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 120px;
     background-color: inherit;
-    margin: 0;
-    padding: 0;
 }
 
-.intro::after{
-    content: "";
-    display: none;
-    height: 15%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+.logo-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex: 1; /* Растягиваем блок лого, чтобы кнопка осталась справа */
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Центрируем логотип по горизонтали */
 }
 
 .menu-btn {
     width: 40px;
     height: 40px;
-    position: fixed;
-    top: 38.5px;
-    right: 38.5px;
     cursor: pointer;
-    z-index: 1000;
+    margin-left: auto; /* Отступаем от левого края контейнера */
 }
-  
-.bar {
+
+.menu-btn .bar {
     width: 100%;
     height: 4px;
     background-color: black;
     margin: 6px 0;
     transition: transform 0.3s, opacity 0.3s;
 }
-  
+
 .menu-container {
     display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #ff5555;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: inherit;
     color: #000000;
     width: 200px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 999;
 }
-  
+
 .menu-container ul {
     list-style-type: none;
     padding: 0;
-    color: #000000;
-}
-  
-.menu-container ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #000000;
-    color: #000000;
-}
-  
-.menu-container ul li:last-child {
-    border-bottom: none;
+    margin: 0;
     color: #000000;
 }
 
-.menu-container ul li:hover {
-    text-decoration: underline black;
-    cursor: pointer; 
+.menu-container ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.menu-container ul li:last-child {
+    border-bottom: none;
 }
 
 .menu-container ul li a {
     color: black; 
+    font-size: 1.2em;
+    font-weight: 700;
     text-decoration: none; 
 }
 
 .menu-container ul li a:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
-.logo{
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    margin-top: 0.45em;
-}
+/* Media Queries for responsiveness */
 
-p{
-    display: block;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 500px;
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .menu-container {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        overflow-y: auto;
+        background-color: #fff;
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+    .menu-container.open {
+        right: 0;
+    }
+
+    /* Анимация кнопки */
+    .menu-btn.open .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    .menu-btn.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-btn.open .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
 }

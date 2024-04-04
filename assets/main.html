@@ -1,34 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta chatset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
-    <link rel="stylesheet" href="D:\my things\chelovek\assets\css\styles1.css">
+    <link rel="stylesheet" href="css/styles1.css">
 </head>
 <body>
-    <div class="intro">
-
-        <div class="menu-btn">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img class="logo" src="images/logoforsitetrue.png" alt="logoforsitetrue">
+            </div>
+            <div class="menu-btn" id="menuBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menu-container" id="menuContainer">
+                <ul class="textes">
+                    <li><a href="#">My personal blog</a></li>
+                    <li><a href="SiteAboutME.html">About me</a></li>
+                    <li><a href="main.html">Main site</a></li>     
+                </ul>
+            </div>
         </div>
-    
-        <div class="menu-container" id="menuContainer">
-            <ul>
-                <li><a href="#">My personal blog</a></li>
-                <li><a href="SiteAboutME.html">About me</a></li>
-                <li><a href="main.html">Main site</a></li>     
-            </ul>
-        </div> 
-
-        <img class="logo" src="images/logoforsitetrue.png" alt="logoforsitetrue"></img> 
-        
-        <p>Hello World!</p>
-
+        <div class="content">
+            <!-- Your content here -->
+        </div>
     </div>
 
-<script src="scripts/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menuBtn');
+            const menuContainer = document.getElementById('menuContainer');
+
+            menuBtn.addEventListener('click', function () {
+                menuContainer.classList.toggle('open');
+                this.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
