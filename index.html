@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chelovek's Site</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chlvk</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{
+      background: radial-gradient(circle at 30% 50%, #111, #000);
+      color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      height:100vh;text-align:center;overflow:hidden;
+    }
+    h1{font-size:3rem;letter-spacing:2px;animation:fadeIn 2s ease;}
+    p{color:#aaa;margin-top:10px;font-size:1.1rem;max-width:500px;animation:fadeIn 3s ease;}
+    a{
+      margin-top:25px;padding:10px 25px;border:1px solid #fff;border-radius:30px;
+      color:#fff;text-decoration:none;transition:.3s;animation:fadeIn 4s ease;
+    }
+    a:hover{background:#fff;color:#000;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
+    footer{position:absolute;bottom:20px;font-size:0.8rem;color:#666;}
+  </style>
 </head>
 <body>
-
-<div class="intro">
-    <img class="logo" src="assets/images/logoforsitetrue2.png" alt="logoforsitetrue2"></img> 
-    <h1 class="intro-title">Hey there, Welcome to Chelovek's Site! We're excited to have you here.
-    Explore, discover, and enjoy all that we have to offer.
-     Thanks for stopping by!</h1>
-    <button class="find-out-more" onclick="window.location.href = 'assets/main.html' ;">Find out more</button>
-    <div class="video">
-        <video class="video-media" src="assets/videos/video.mp4" autoplay muted loop></video></div>
-</div>
-
-
+  <h1>Welcome to chlvk</h1>
+  <p>A creative space for design, code, and ideas.  
+  Simplicity meets elegance.</p>
+  <a href="#projects">Explore</a>
+  <footer>© 2025 chlvk</footer>
 </body>
 </html>
